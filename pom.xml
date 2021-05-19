@@ -18,6 +18,20 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.ninja.service.TheLedgerCo</mainClass>
+                    </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -28,27 +42,11 @@
     <dependencies>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.37</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-hibernate</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-auth</artifactId>
-            <version>0.9.1</version>
-        </dependency>
 
     </dependencies>
 
